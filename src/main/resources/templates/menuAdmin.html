@@ -1,0 +1,48 @@
+<nav class="navbar bg-body-tertiary fixed-top" id="principalAdmin">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="principalAdmin">BETINFOOD</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-start" tabindex="-1" style="max-width:300px;" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+
+          <a th:href="@{/}" class="nav-link">BETINFOOD</a>
+         <!--
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">BETINFOOD</h5> por el momento para regresar al inicio nms
+          --> 
+
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+                <center>
+                <img src="data:image/png;base64,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" width="200px" height="200px" alt="" class="img-fluid" />
+                
+                <h2 href="#" th:text="${cliente.getNombres()}">Cucaracha</h2>
+                
+                </center>
+            </li>
+            <li class="nav-item">
+                <h3 class="nav-link" href="#">Carta</h3>
+                <a href="/platoAdmin" type="button" class="btn btn-info" style="width:16rem;">PLATOS</a></br>
+                <a href="/promoAdmin" style="margin-top:5px;width:16rem;" type="button" class="btn btn-info">PROMOCIONES</a>
+            </li>
+            <li class="nav-item">
+                <h3 class="nav-link" href="#" >PEDIDOS</h3>
+                <a type="button" href="pedidoOrdenes" class="btn btn-info" style="width:16rem;">ORDENES</a>   
+            </li>
+            <li class="nav-item">
+                <h3 class="nav-link" href="#">PERSONAL</h3>
+                <a type="button" href="personal" class="btn btn-info" style="width:16rem;">GESTION PERSONAL</a>   
+            </li>
+            <li class="nav-item">
+                <h3 class="nav-link" href="#">REPORTES</h3>
+                <a type="button" href="reportes" class="btn btn-info" style="width:16rem;">REPORTES</a>   
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
